@@ -4,9 +4,11 @@
   <hr><br>
   <ul>
     <div *ngFor='let quote of quotes; let i = index'>
-      <li >Quote by {{quote.authorname}} posted by {{quote.name}}</li>
-      <p (click)='toggleDetails(i)'>Checkout quote</p>
+      <li appHighlight>Quote by {{quote.authorname}} posted by {{quote.name}}</li>
+      <button (click)='toggleDetails(i)'>Checkout quote</button>
       <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='completeQuote($event, i)'></app-quote-detail>
+      
     </div>
+    
   </ul>  
 </div>
