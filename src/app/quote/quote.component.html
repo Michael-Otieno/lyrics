@@ -3,6 +3,7 @@
     <ul>
       <li *ngFor='let quote of quotes'>
         Quote by {{quote.authorname}} posted by {{quote.name}}
+        <app-quote-detail [quote]='quote'></app-quote-detail>
       </li>
     </ul>
     <p *ngIf='quotes.length > 10'>We have lots of goals to vote</p>
