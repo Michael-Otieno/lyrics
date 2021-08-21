@@ -11,8 +11,8 @@ export class QuoteDetailComponent implements OnInit {
   @Input() quote!: Quote;
   @Output() isComplete=new EventEmitter<boolean>();
 
-  quoteComplete(complete:boolean){
-    this.isComplete.emit(complete);
+  quoteComplete(complete:boolean){               //
+    this.isComplete.emit(complete);         //
   }
 
 
@@ -33,3 +33,4 @@ export class QuoteDetailComponent implements OnInit {
   }
 
 }
+

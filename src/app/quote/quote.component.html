@@ -1,14 +1,14 @@
 <div>
-  <hr>
-  <h1>CAR QUOTES</h1>
-  <hr><br>
-  <ul>
-    <div *ngFor='let quote of quotes; let i = index'>
-      <li appHighlight>Quote by {{quote.authorname}} posted by {{quote.name}} on {{quote.completeDate | date | uppercase}}</li>
-      <button (click)='toggleDetails(i)'>Checkout quote</button>
-      <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='completeQuote($event, i)'></app-quote-detail>
+<hr>
+<h1>CAR QUOTES</h1>
+<hr><br>
+<ul>
+  <div *ngFor='let quote of quotes; let i = index'>
+    <li appHighlight>Quote by {{quote.authorname}} posted by {{quote.name}} on {{quote.completeDate | date | uppercase}}</li>
+    <button (click)='toggleDetails(i)'>Checkout quote</button>
+    <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='completeQuote($event, i)'></app-quote-detail>
       
-    </div>
+  </div>
     
-  </ul>  
+</ul>  
 </div>
