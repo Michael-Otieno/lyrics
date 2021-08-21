@@ -4,3 +4,5 @@
 <button (click)='quoteComplete(true)'>Delete Quote</button>
 <button (click)='upVote()'> upVotes <span>{{upVotes}}</span></button>
 <button (click)='downVote()'> downVotes <span>{{downVotes}}</span></button>
+
+<p>Posted: {{quote.completeDate|dateCount}} days ago.</p>
