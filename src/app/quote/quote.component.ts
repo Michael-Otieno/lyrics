@@ -10,11 +10,15 @@ import { Quote } from '../quote'
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[] = [
-    {authorname: 'Elon Musk', name:'John Kiarie',description:'Sel-driving cars are the natural extension of active safety and obviously something we should do.'},
-    {authorname: 'Enzo Ferrari', name: 'Peris Wanyama',description: "The fact is I don't just drive to get from A to B. I enjoy feeling the cars reactions, becoming part of it."},
-    {authorname: 'Lewis Hamilton', name:'Joseph Wafula',description:"The way I drive, the way I handle a car, is an expression of my inner feelings."}
+    new Quote('Elon Musk','John Kiarie','Sel-driving cars are the natural extension of active safety and obviously something we should do.'),
+    new Quote('Enzo Ferrari', 'Peris Wanyama', "The fact is I don't just drive to get from A to B. I enjoy feeling the cars reactions, becoming part of it."),
+    new Quote('Lewis Hamilton', 'Joseph Wafula', "The way I drive, the way I handle a car, is an expression of my inner feelings.")
     
   ];
+
+  toggleDetails(index:any){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
 
   constructor() { }
 

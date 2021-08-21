@@ -1,10 +1,13 @@
 <div>
+    <hr>
     <h1>CAR QUOTES</h1>
+    <hr><br>
     <ul>
-      <li *ngFor='let quote of quotes'>
-        Quote by {{quote.authorname}} posted by {{quote.name}}
-        <app-quote-detail [quote]='quote'></app-quote-detail>
-      </li>
+      <div *ngFor='let quote of quotes; let i = index'>
+        <li >Quote by {{quote.authorname}} posted by {{quote.name}}</li>
+        <button (click)='toggleDetails(i)'>Checkout quote</button>
+        <app-quote-detail *ngIf='quote.showDescription' [quote]='quote'></app-quote-detail>  
+     </div>
     </ul>
-    <p *ngIf='quotes.length > 10'>We have lots of goals to vote</p>
+    <p *ngIf='quotes.length > 2'>We have lots of goals to vote</p>
 </div>
