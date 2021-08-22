@@ -2,12 +2,12 @@
   <h1 class="text-center pt-5 fw-bolder">CAR QUOTES</h1><hr>
   <div class="row mt-0">  
     <div class="col-md-6">
-      <app-quote-form></app-quote-form>
+      <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
     </div>
 
     <div class="col-md-6">
       <div *ngFor='let quote of quotes; let i = index'>
-        <h4 appHighlight class="mb-0 fst-italic">{{quote.id}}.Quote by {{quote.authorname}} posted by {{quote.name}} on {{quote.completeDate | date | uppercase}}</h4>
+        <h4  appHighlight class="mb-0 fst-italic">{{quote.id}}.Quote by {{quote.authorname}} posted by {{quote.name}} on {{quote.completeDate | date | uppercase}}</h4>
         <button (click)='toggleDetails(i)'class="btn btn-link p-1 text-danger">Checkout quote</button>
         <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='completeQuote($event, i)'></app-quote-detail>     
       </div>

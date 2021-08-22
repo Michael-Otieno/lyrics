@@ -2,20 +2,29 @@
     <h2 class="text-center">Post a new Quote</h2>
     <p class="lead">Do you love cars? </p>
     <p class="lead">Post Quotes about Cars and checkout the quotes about cars and even upvote or downvote a quote.</p>
-    <form>
+    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
         <div class="form-group">  
-            <label for="name"></label>
-            <input type="text" required class="form-control" id="name" placeholder="NAME"> 
+            <label for="name">Name</label>
+            <input type="text" required class="form-control" id="name" [(ngModel)]='newQuote.name' name="name" #name='ngModel' required> 
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                <p>Name is required</p>
+            </div>
         </div>
 
         <div class="form-group">  
-            <label for="author"></label>
-            <input type="text" required class="form-control" id="name" placeholder="QUOTE BY:"> 
+            <label for="authorname">QUOTE BY:</label>
+            <input type="text" required class="form-control" id="authorname" [(ngModel)]='newQuote.authorname' name="authorname" #authorname='ngModel' required> 
+            <div [hidden]="authorname.valid || authorname.pristine" class="alert alert-danger">
+                <p>authorname is required</p>
+            </div>
         </div>
 
         <div class="form-group"> 
-            <label for="description"></label>
-            <textarea class="form-control" id="description" rows="4" required placeholder="QUOTE..."></textarea> 
+            <label for="description">QUOTE...</label>
+            <textarea class="form-control" id="description" rows="4" [(ngModel)]='newQuote.description' name='description' #description='ngModel' required></textarea> 
+            <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+                <p>Description is required</p>
+            </div>
         </div>
         <button class="btn btn-secondary mt-3 mb-5">Upload quote</button>
     </form>
