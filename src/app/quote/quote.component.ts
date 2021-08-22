@@ -9,7 +9,7 @@ import { Quote } from '../quote'
 })
 export class QuoteComponent implements OnInit {
 
-  quotes:Quote[] = [//
+  quotes:Quote[] = [
     new Quote(1,'Elon Musk','John Kiarie','Sel-driving cars are the natural extension of active safety and obviously something we should do.', new Date(2020,1,9)),
     new Quote(2,'Enzo Ferrari', 'Peris Wanyama', "The fact is I don't just drive to get from A to B. I enjoy feeling the cars reactions, becoming part of it.", new Date(2021,5,1)),
     new Quote(3,'Lewis Hamilton', 'Joseph Wafula', "The way I drive, the way I handle a car, is an expression of my inner feelings.",new Date(2021,5,20))
