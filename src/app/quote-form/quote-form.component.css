@@ -1,8 +1,13 @@
 input, textarea{
     background-color: transparent;
     border: 2px solid white;
-    outline: none;
+    color: blue;
 }
+input:focus, textarea:focus{
+    background-color: white;
+    
+}
+
 ::placeholder{
     color: white;
 }
