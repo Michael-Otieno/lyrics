@@ -1,0 +1,9 @@
+input, textarea{
+    background-color: transparent;
+    border: 2px solid white;
+    outline: none;
+}
+::placeholder{
+    color: white;
+}
+

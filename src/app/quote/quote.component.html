@@ -1,8 +1,6 @@
-<div class='mt-5'>
-  <h1 class="text-center pt-5">CAR QUOTES</h1>
-  <hr><br>
-  <div class="row">
-   
+<div class='container mt-5' style=" background: rgba(54, 71, 54, 0.3);">
+  <h1 class="text-center pt-5">CAR QUOTES</h1><hr>
+  <div class="row mt-0">  
     <div class="col-md-6">
       <app-quote-form></app-quote-form>
     </div>
@@ -10,7 +8,7 @@
     <div class="col-md-6">
       <div *ngFor='let quote of quotes; let i = index'>
         <p appHighlight class="mb-0 lead">{{quote.id}}.Quote by {{quote.authorname}} posted by {{quote.name}} on {{quote.completeDate | date | uppercase}}</p>
-        <button (click)='toggleDetails(i)'class="btn btn-outline-none text-decoration-underline">Checkout quote</button>
+        <button (click)='toggleDetails(i)'class="border-0 text-decoration-underline text-light">Checkout quote</button>
         <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='completeQuote($event, i)'></app-quote-detail>     
       </div>
     </div>
