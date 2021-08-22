@@ -12,7 +12,13 @@ This is an app where users can share car quotes with the names of the people tha
 
 ## Technologies Used
 
-HTML CSS TYPESCRIPT ANGULARJS
+  HTML 
+  
+  CSS
+  
+  TYPESCRIPT
+  
+  JAVASCRIPT
 
 ## Development server
 
